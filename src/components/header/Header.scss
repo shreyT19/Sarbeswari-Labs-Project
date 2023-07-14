@@ -1,0 +1,116 @@
+@import "../../css-config/mixins.scss";
+
+.top-header {
+  width: 100%;
+  font-size: 16px;
+  // color:white;
+  padding: 0 24px;
+  z-index: 99;
+  margin-top: 12px;
+  // border-bottom: 1px solid rgba(0,0,0,0.1);
+  @include md {
+    padding: 0 40px;
+  }
+  .top-header__container {
+    background-color: rgb(213, 213, 205);
+    padding-inline: 24px;
+    max-width: 1200px;
+    display: flex;
+    height: 48px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 16px;
+    @include md {
+      padding-inline: 40px;
+      height: 64px;
+    }
+    .left {
+      display: flex;
+      cursor: pointer;
+      justify-content: center;
+      align-items: center;
+
+      padding: 8px 0;
+      border-radius: 8px;
+      font-weight: 600;
+
+      transition: all 0.2s ease-in-out;
+      font-size: 16px;
+      gap: 4px;
+      .arrow {
+        display: flex;
+      }
+    }
+    .middle {
+      display: none;
+      gap: 12px;
+      @include md {
+        display: flex;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .hyperlinks {
+        text-decoration: none;
+        color: black;
+        &:hover {
+          color: #424242;
+          // text-decoration: underline;
+        }
+      }
+    }
+    .right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      .login {
+        font-weight: 600;
+        transition: all 0.2s ease-in-out;
+        font-size: 16px;
+        border-radius: 8px;
+        
+        cursor: pointer;
+
+        background-color: #212121;
+        color: white;
+        padding: 8px 16px;
+
+        &:hover {
+          color: #424242;
+        }
+
+        @include sm {
+          background-color: rgb(213, 213, 205);
+          color: #212121;
+        }
+      }
+      .join-us {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        background-color: #212121;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.2s ease-in-out;
+        font-size: 16px;
+        cursor: pointer;
+        @include sm {
+          display: flex;
+        }
+        .arrow {
+          display: flex;
+        }
+
+        &:hover {
+          background-color: #424242;
+        }
+      }
+    }
+  }
+}

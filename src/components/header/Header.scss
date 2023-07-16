@@ -1,18 +1,21 @@
 @import "../../css-config/mixins.scss";
 
 .top-header {
+  text-transform: uppercase;
   width: 100%;
   font-size: 16px;
-  // color:white;
+  // position: relative;
+  
   padding: 0 24px;
   z-index: 99;
   margin-top: 12px;
-  // border-bottom: 1px solid rgba(0,0,0,0.1);
+
   @include md {
     padding: 0 40px;
   }
+
   .top-header__container {
-    background-color: rgb(213, 213, 205);
+    background-color: #3a3b3c;
     padding-inline: 24px;
     max-width: 1200px;
     display: flex;
@@ -21,30 +24,35 @@
     align-items: center;
     margin: 0 auto;
     border-radius: 16px;
+
     @include md {
       padding-inline: 40px;
       height: 64px;
     }
+
     .left {
+      color: white;
       display: flex;
       cursor: pointer;
       justify-content: center;
       align-items: center;
-
       padding: 8px 0;
       border-radius: 8px;
       font-weight: 600;
-
       transition: all 0.2s ease-in-out;
       font-size: 16px;
       gap: 4px;
+
       .arrow {
         display: flex;
+        font-size: 24px;
       }
     }
+
     .middle {
       display: none;
       gap: 12px;
+
       @include md {
         display: flex;
         position: absolute;
@@ -54,45 +62,57 @@
 
       .hyperlinks {
         text-decoration: none;
-        color: black;
-        &:hover {
-          color: #424242;
-          // text-decoration: underline;
+        color: white;
+
+        &::after {
+          content: "";
+          display: block;
+          width: 0;
+          height: 2px;
+          background: #000;
+          transition: width 0.3s;
+        }
+
+        &:hover::after {
+          background-color: #b0b3b8;
+          width: 100%;
         }
       }
     }
+
     .right {
-      display: flex;
+      display: none;
       align-items: center;
       justify-content: center;
       gap: 24px;
+      @include md{
+        display: flex;
+
+      }
       .login {
         font-weight: 600;
         transition: all 0.2s ease-in-out;
         font-size: 16px;
         border-radius: 8px;
-        
         cursor: pointer;
-
-        background-color: #212121;
         color: white;
         padding: 8px 16px;
 
         &:hover {
-          color: #424242;
+          color: #b0b3b8;
         }
 
         @include sm {
-          background-color: rgb(213, 213, 205);
-          color: #212121;
+          // background-color: rgb(213, 213, 205);
+          // color: #212121;
         }
       }
+
       .join-us {
         display: none;
         justify-content: center;
         align-items: center;
-        background-color: #212121;
-        color: white;
+        background-color: white;
         padding: 8px 16px;
         border-radius: 8px;
         font-weight: 600;
@@ -100,17 +120,43 @@
         transition: all 0.2s ease-in-out;
         font-size: 16px;
         cursor: pointer;
+
         @include sm {
           display: flex;
         }
+
         .arrow {
           display: flex;
+          margin-left: 2px;
         }
 
         &:hover {
-          background-color: #424242;
+          background-color: #b0b3b8;
         }
       }
     }
+    .right-arrow{
+        color: white;
+        font-size: 24px;
+        display: flex;
+        transition: all 0.2s ease-in-out;
+        // rotate: 180deg;
+    }
+  }
+
+  &.sticky-nav{
+    position: fixed;
+    // position: sticky;
+    top: 6px;
+    animation: stickyNav 0.5s ease forwards;
+  }
+}
+
+@keyframes stickyNav {
+  0% {
+    transform: translateY(-5rem);
+  }
+  100% {
+    transform: translateY(0);
   }
 }

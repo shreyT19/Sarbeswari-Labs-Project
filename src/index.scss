@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap");
+
+:root{
+    --speed: 500ms;
+}
 * {
     margin: 0;
     padding: 0;
@@ -11,5 +15,12 @@ body {
     font-size: 16px;
     line-height: 22px;
     font-weight: 500;
+    height: 400vh;
+}
+
+.active{
+    rotate: 180deg;
+    animation: rotate 2s ease-in-out;
+
 }
 

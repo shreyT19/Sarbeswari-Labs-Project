@@ -1,0 +1,33 @@
+.menu {
+  display: grid;
+  grid-template-rows: 40px max-content;
+  gap: 10px;
+  position: relative;
+  top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 160px;
+  background-color: #3a3b3c;
+  color: white;
+  border-radius: 16px;
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+        transform: translateX(0);
+
+    transition: var(--speed);
+    .list-item {
+        display: flex;
+        align-items: center;
+            transition: 0.4s, transform 0.4s var(--speed);
+        // justify-content: space-between;
+            transform: translateX(0);
+        gap:10px;
+      
+    }
+  }
+}

@@ -16,6 +16,7 @@ const Header: React.FC = () => {
 
   const[mobileMenu, setMobileMenu] = useState<boolean>(false);
 
+  //for mobile menu
   const handleClickShowPopup = ()=>{
 
     setMobileMenu(oldState=> !oldState);

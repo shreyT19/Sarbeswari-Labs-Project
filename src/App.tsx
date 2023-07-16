@@ -1,6 +1,6 @@
 // import { useState } from 'react'
 
-import ActiveMenu from './components/ActiveMenu/ActiveMenu'
+// import ActiveMenu from './components/ActiveMenu/ActiveMenu'
 import Header from './components/header/Header'
 
 function App() {

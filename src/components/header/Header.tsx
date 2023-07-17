@@ -114,7 +114,7 @@ const Header: React.FC = () => {
         )}
       </div>
       {
-        mobileMenu && (<ActiveMenu/>)
+        mobileMenu &&  (<div className="active-menu"><ActiveMenu /></div>)
       }
     </header>
   );

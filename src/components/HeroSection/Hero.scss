@@ -1,0 +1,134 @@
+@import "../../css-config/mixins.scss";
+
+.hero__section {
+  width: 100%;
+  font-size: 16px;
+  padding: 0 24px;
+  margin-top: 24px;
+  @include md {
+    padding: 0 40px;
+  }
+  .hero__container {
+    display: flex;
+
+    // justify-content: flex-end;
+    align-items: center;
+    flex-direction: column-reverse;
+    max-width: calc(100% - 48px);
+
+    margin: 0 auto;
+
+    gap: 20px;
+
+    @include md {
+      gap: 0px;
+
+      justify-content: space-around;
+      flex-direction: row;
+      max-width: 1200px;
+      padding-inline: 40px;
+    }
+    .left-side {
+      .heading {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-size: 32px;
+        color: #3a3b3c;
+        font-weight: bolder;
+        line-height: 1;
+        padding: 12px;
+        text-align: center;
+        align-items: center;
+        @include md {
+            text-align: justify;
+            align-items: flex-start;
+            margin-bottom: 8px;
+            padding: 24px;
+            font-size: 48px;
+        }
+        // span {
+           
+        // }
+      }
+      .sub-heading {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        width: 100%;
+        font-size: 16px;
+        padding-inline:  24px;
+        padding-block: 6px 12px;
+        text-align: center;
+        @include md{
+            font-size: 20px;
+            text-align: left;
+        }
+      }
+      .buttons {
+        display: flex;
+        gap:10px;
+        padding: 24px;
+        justify-content: center;
+        align-items: center;
+        @include md{
+            justify-content: flex-start;
+        }
+        .get__quote__now {
+            display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #3a3b3c;
+          color: white;
+          padding: 4px 10px;
+          border-radius: 8px;
+          font-weight: 600;
+          text-decoration: none;
+          transition: all 0.2s ease-in-out;
+          font-size: 12px;
+          cursor: pointer;
+
+          @include md{
+            padding: 8px 16px;
+            font-weight: 600;
+            font-size: 16px;
+        }
+          &:hover {
+            opacity: 0.9;
+          }
+        }
+        .learn__more{
+            display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #3a3b3c;
+          border: 1px solid #3a3b3c;
+          border-radius: 8px;
+          text-decoration: none;
+          padding: 4px 10px;
+          transition: all 0.2s ease-in-out;
+          font-size: 12px;
+          cursor: pointer;
+          @include md{
+              padding: 8px 16px;
+              font-weight: 600;
+              font-size: 16px;
+          }
+          &:hover {
+            color: #b0b3b8;
+          }
+        }
+      }
+    }
+    .right-side {
+      display: flex;
+      img {
+          width: 240px;
+          @include md {
+            width: 500px;
+        }
+      }
+    }
+  }
+}

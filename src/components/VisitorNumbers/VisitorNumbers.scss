@@ -7,9 +7,11 @@
     justify-content: space-evenly;
     flex-direction: column;
     gap:60px;
-    padding: 50px 0 0;
+    padding: 40px 0 0;
+    padding-inline: 20px;
     @include md{
-       padding: 100px 0 0;
+        padding-inline: 0;
+       padding: 80px 0 0;
     gap:0px;
     flex-direction: row;
    }
@@ -19,6 +21,7 @@
         align-items: center;
         span{
             font-size: 48px;
+            color: #3a3b3c;;
             font-weight:bolder;
         }
         p{

@@ -10,7 +10,7 @@ const Header: React.FC = () => {
 
   const menuRef = useRef<HTMLDivElement>(null);
 
-  const [scrolled, setScrolled] = useState<boolean>(false);
+  // const [scrolled, setScrolled] = useState<boolean>(false);
   const [screenSize, setScreenSize] = useState<number>(window.innerWidth);
   const [activeMenu, setActiveMenu] = useState<boolean>(false);
 

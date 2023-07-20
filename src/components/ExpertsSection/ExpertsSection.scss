@@ -1,0 +1,39 @@
+@import "../../css-config/mixins.scss";
+.experts__section{
+    padding: 80px 0 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-inline: 20px;
+    @include md{
+        padding-inline:0;
+    }
+    .small-header__section{
+        display: flex;
+        flex-direction: column;
+        
+        .sub-heading{
+            padding: 10px 0;
+            font-weight: bold;
+
+        }
+        .heading{
+            font-size: 32px;
+            font-weight: bolder;
+            color:#3a3b3c;
+            padding: 10px 0 ;
+            @include md{
+                font-size: 44px;
+            }
+        }
+        .about{
+            font-size: 14px;
+            color:grey;
+            line-height: 1.5;
+            padding: 20px 0;
+            @include md{
+                font-size: 16px;
+                
+            }
+        }
+    }
+}

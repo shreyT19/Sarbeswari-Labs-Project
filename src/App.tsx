@@ -1,6 +1,7 @@
 // import { useState } from 'react'
 
 // import ActiveMenu from './components/ActiveMenu/ActiveMenu'
+import ExpertsSection from './components/ExpertsSection/ExpertsSection'
 import Hero from './components/HeroSection/Hero'
 import CardComponent from './components/UsableComponents/CardComponent/CardComponent'
 import VisitorNumber from './components/VisitorNumbers/VisitorNumbers'
@@ -17,6 +18,7 @@ function App() {
       <Hero/>
       <CardComponent/>
       <VisitorNumber/>
+      <ExpertsSection/>
       {/* <CardComponent/>
       <CardComponent/> */}
     </>

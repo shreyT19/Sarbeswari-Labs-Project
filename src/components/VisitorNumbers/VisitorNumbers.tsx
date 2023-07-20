@@ -26,7 +26,7 @@ interface Props {
 }
 
 export const ReusableComponent: React.FC<Props> = ({ limit, Character,About }) => {
-
+    let interval: any;
     const [count,setCounter] = useState<number>(0);
    
     useEffect(()=>{
@@ -34,13 +34,35 @@ export const ReusableComponent: React.FC<Props> = ({ limit, Character,About }) =
             setCounter(prevNumber=>prevNumber+1);
         }
         
-        let interval = setInterval(()=>{
-            if(count<limit){
-                handleScreenLoad();
-            }else{
-                clearInterval(interval);
-            }
-        },20);
+        if(limit===50){
+            interval = setInterval(()=>{
+                if(count<limit){
+                    handleScreenLoad();
+                }else{
+                    clearInterval(interval);
+                }
+            },10);
+        }
+        if(limit===150){
+            interval = setInterval(()=>{
+                if(count<limit){
+                    handleScreenLoad();
+                }else{
+                    clearInterval(interval);
+                }
+            },4);
+        }
+
+        if(limit===300){
+            interval = setInterval(()=>{
+                if(count<limit){
+                    handleScreenLoad();
+                }else{
+                    clearInterval(interval);
+                }
+            },2.5);
+        }
+        
 
         return ()=>{
             clearInterval(interval);

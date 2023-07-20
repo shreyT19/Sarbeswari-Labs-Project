@@ -78,7 +78,7 @@ const Header: React.FC = () => {
           <span className="arrow">
             <TbMicroscope />
           </span>
-          <span>Sarbeswari Labs</span>
+          <span>Clinic Sarbeswari</span>
         </div>
         <div className="middle">
           <a className="hyperlinks" href="">

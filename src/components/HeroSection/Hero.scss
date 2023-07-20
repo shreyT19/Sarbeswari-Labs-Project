@@ -14,7 +14,6 @@
     // justify-content: flex-end;
     align-items: center;
     flex-direction: column-reverse;
-    max-width: calc(100% - 48px);
 
     margin: 0 auto;
 
@@ -23,10 +22,10 @@
     @include md {
       gap: 0px;
 
-      justify-content: space-around;
+      // justify-content: space-between;
       flex-direction: row;
       max-width: 1200px;
-      padding-inline: 40px;
+      // padding-inline: 40px;
     }
     .left-side {
       .heading {
@@ -126,7 +125,7 @@
       img {
           width: 240px;
           @include md {
-            width: 500px;
+            width: 480px;
         }
       }
     }

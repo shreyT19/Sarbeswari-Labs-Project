@@ -44,7 +44,7 @@ const Header: React.FC = () => {
   //   };
   // }, []);
 
-  const classes = scrolled ? "top-header sticky-nav" : "top-header";
+  // const classes = scrolled ? "top-header sticky-nav" : "top-header";
 
   // for screen size
   useEffect(() => {
@@ -70,9 +70,10 @@ const Header: React.FC = () => {
       setMobileMenu(false);
     }
   }, [screenSize]);
-
+  
   return (
-    <header className={classes}>
+    // <header className={classes}>
+    <header className="top-header">
       <div className="top-header__container">
         <div className="left">
           <span className="arrow">

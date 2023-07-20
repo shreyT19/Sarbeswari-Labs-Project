@@ -24,25 +24,25 @@ const Header: React.FC = () => {
 
 
   }
-  // for navbar sticky
-  const handleScrollEvent = () => {
-    const scrollHeight: number = window.scrollY;
+  // // for navbar sticky
+  // const handleScrollEvent = () => {
+  //   const scrollHeight: number = window.scrollY;
 
-    if (scrollHeight > 200) {
-      setScrolled(true);
-    } else {
-      setScrolled(false);
-    }
-  };
+  //   if (scrollHeight > 200) {
+  //     setScrolled(true);
+  //   } else {
+  //     setScrolled(false);
+  //   }
+  // };
 
-  // for navbar sticky
-  useEffect(() => {
-    window.addEventListener("scroll", handleScrollEvent);
+  // // for navbar sticky
+  // useEffect(() => {
+  //   window.addEventListener("scroll", handleScrollEvent);
 
-    return () => {
-      window.removeEventListener("scroll", handleScrollEvent);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScrollEvent);
+  //   };
+  // }, []);
 
   const classes = scrolled ? "top-header sticky-nav" : "top-header";
 

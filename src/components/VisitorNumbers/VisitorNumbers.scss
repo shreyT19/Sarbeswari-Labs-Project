@@ -1,0 +1,29 @@
+
+@import "../../css-config/mixins.scss";
+.visitor__section{
+    max-width: 1200px;
+    display: flex;
+    margin: 0 auto;   
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap:60px;
+    padding: 50px 0 0;
+    @include md{
+       padding: 100px 0 0;
+    gap:0px;
+    flex-direction: row;
+   }
+    .one{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        span{
+            font-size: 48px;
+            font-weight:bolder;
+        }
+        p{
+            font-size: 14px;
+
+        }
+    }
+}

@@ -3,6 +3,7 @@
 // import ActiveMenu from './components/ActiveMenu/ActiveMenu'
 import Hero from './components/HeroSection/Hero'
 import CardComponent from './components/UsableComponents/CardComponent/CardComponent'
+import VisitorNumber from './components/VisitorNumbers/VisitorNumbers'
 import Header from './components/header/Header'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       {/* <ActiveMenu/> */}
       <Hero/>
       <CardComponent/>
+      <VisitorNumber/>
       {/* <CardComponent/>
       <CardComponent/> */}
     </>

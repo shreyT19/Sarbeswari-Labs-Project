@@ -1,0 +1,79 @@
+@import "../../css-config/mixins.scss";
+
+.footer__section {
+    padding: 40px 0;
+    background-color: rgb(222, 220, 220);
+    @include md{
+        padding: 100px 0 ;
+    }
+    .footer__container {
+        max-width: 1200px;
+        margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 30px;
+    flex-direction: column;
+    // padding-top: 20px;
+    @include md {
+        padding-top: 0px;
+      flex-direction: row;
+      padding-inline: 30px;
+    }
+    .left-side {
+        div {
+          display: flex;
+          text-align: center;
+          gap:5px;
+        .logo {
+           flex-direction: column;
+           
+           font-size: 16px;
+           @include md{
+            font-size: 24px;
+           }
+        }
+        .logo-text {
+          font-size: 16px;
+          font-weight: bolder;
+          color: #3a3b3c;
+          // padding: 10px 0;
+          @include md {
+            font-size: 24px;
+          }
+        }
+      }
+      .about {
+        font-size: 14px;
+        color: grey;
+        line-height: 1.5;
+        padding: 20px 0;
+        @include md {
+          font-size: 16px;
+        }
+      }
+    }
+    .right-side {
+        padding:  0 0 20px;
+      .heading__item {
+        font-size: 16px;
+        padding-bottom: 10px;
+        @include md {
+          font-size: 20px;
+        }
+      }
+      .items {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        color:grey;
+        font-size: 14px;
+        @include md {
+          font-size: 16px;
+        }
+        p{
+            cursor: pointer;
+        }
+      }
+    }
+  }
+}

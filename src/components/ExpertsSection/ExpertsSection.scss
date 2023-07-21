@@ -1,44 +1,86 @@
 @import "../../css-config/mixins.scss";
-.experts__section{
+
+.experts__section {
+  width: 100%;
+  font-size: 16px;
+  padding: 40px 24px;
+  @include md {
+      padding: 0 40px;
+      
+  }
+  .experts__container {
+    display: flex;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     
-    max-width: 1200px;
+    padding-block: 20px;
+    align-items: center;
+    flex-direction: column-reverse;
     margin: 0 auto;
-    padding-inline: 20px;
-    padding-top: 30px;
-    @include md{
-        
-        padding: 80px 0 0;
-        padding-inline:0;
+    
+    gap: 20px;
+    @include md {
+       
+        box-shadow: none;
+        gap: 0px;
+        padding-block: 80px;
+        justify-content: space-between;
+      flex-direction: row;
+      max-width: 1200px;
     }
-    .small-header__section{
+
+    .left-side {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-inline: 20px;
+      @include md{
+        padding-inline: 0;
+      }
+      .small-header__section {
         display: flex;
         flex-direction: column;
-        @include md{
-            padding-left: 30px;
+        @include md {
+          padding-left: 30px;
         }
-        .sub-heading{
-            padding: 10px 0;
-            font-weight: bold;
-
+        .sub-heading {
+          padding: 10px 0;
+          font-weight: bold;
         }
-        .heading{
-            font-size: 32px;
-            font-weight: bolder;
-            color:#3a3b3c;
-            padding: 10px 0 ;
-            @include md{
-                font-size: 44px;
-            }
+        .heading {
+          font-size: 32px;
+          font-weight: bolder;
+          color: #3a3b3c;
+          padding: 10px 0;
+          @include md {
+            font-size: 44px;
+          }
         }
-        .about{
-            font-size: 14px;
-            color:grey;
-            line-height: 1.5;
-            padding: 20px 0;
-            @include md{
-                font-size: 16px;
-                
-            }
+        .about {
+          font-size: 14px;
+          color: grey;
+          line-height: 1.5;
+          padding: 20px 0;
+          @include md {
+            font-size: 16px;
+          }
         }
+      }
     }
+    .right-side {
+      display: flex;
+      
+      img {
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        border-radius: 6px;
+        width: 200px;
+        @include md {
+          width: 480px;
+        }
+      }
+    }
+  }
 }
+
+

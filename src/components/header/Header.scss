@@ -1,21 +1,20 @@
 @import "../../css-config/mixins.scss";
 
 .top-header {
-  text-transform: uppercase;
+  // text-transform: uppercase;
   width: 100%;
-  font-size: 16px;
-  // position: absolute;
-  
+
   padding: 0 24px;
   z-index: 99;
-  // margin-top: 12px;
-  // position: relative;
+
   position: fixed;
+  font-size: 16px;
   @include md {
     padding: 0 40px;
   }
 
   .top-header__container {
+    
     background-color: #3a3b3c;
     padding-inline: 24px;
     max-width: 1200px;
@@ -41,8 +40,11 @@
       border-radius: 8px;
       font-weight: 600;
       transition: all 0.2s ease-in-out;
-      font-size: 16px;
+      font-size: 14px;
       gap: 4px;
+      @include md {
+        font-size: 16px;
+      }
 
       .arrow {
         display: flex;
@@ -86,9 +88,8 @@
       align-items: center;
       justify-content: center;
       gap: 24px;
-      @include md{
+      @include md {
         display: flex;
-
       }
       .login {
         font-weight: 600;
@@ -101,11 +102,6 @@
 
         &:hover {
           color: #b0b3b8;
-        }
-
-        @include sm {
-          // background-color: rgb(213, 213, 205);
-          // color: #212121;
         }
       }
 
@@ -130,31 +126,31 @@
           display: flex;
           margin-left: 2px;
         }
-        
+
         &:hover {
           background-color: #b0b3b8;
         }
       }
     }
-    .right-arrow{
+    .right-arrow {
       color: white;
       font-size: 24px;
       display: flex;
       // animation: 1s ease-in-out 0s infinite normal none running spin;
-        transition: all 0.5s ease-in-out;
-        // rotate: 180deg;
+      transition: all 0.5s ease-in-out;
+      // rotate: 180deg;
     }
   }
 
-  &.sticky-nav{
+  &.sticky-nav {
     position: fixed;
     // position: sticky;
     top: 6px;
     animation: stickyNav 0.5s ease forwards;
   }
-  .active-menu{
-  position: relative;
-  transition: all 0.5s ease-in-out;
+  .active-menu {
+    position: relative;
+    transition: all 0.5s ease-in-out;
   }
 }
 

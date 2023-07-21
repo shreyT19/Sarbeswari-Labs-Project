@@ -2,6 +2,7 @@
 
 // import ActiveMenu from './components/ActiveMenu/ActiveMenu'
 import ExpertsSection from './components/ExpertsSection/ExpertsSection'
+import Footer from './components/FooterSection/Footer'
 import Hero from './components/HeroSection/Hero'
 import CardComponent from './components/UsableComponents/CardComponent/CardComponent'
 import VisitorNumber from './components/VisitorNumbers/VisitorNumbers'
@@ -21,6 +22,7 @@ function App() {
       <ExpertsSection/>
       {/* <CardComponent/>
       <CardComponent/> */}
+      <Footer/>
     </>
   )
 }

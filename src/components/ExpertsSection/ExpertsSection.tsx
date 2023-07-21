@@ -1,4 +1,7 @@
-import ProfilePicture from "../../assets/profile.jpg";
+
+
+import ProfilePicture from '../../assets/Profile.jpg'
+
 import "./ExpertsSection.scss";
 const ExpertsSection: React.FC = () => {
   return (

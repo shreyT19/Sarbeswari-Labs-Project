@@ -1,16 +1,21 @@
 @import "../../css-config/mixins.scss";
 .experts__section{
-    padding: 80px 0 0;
+    
     max-width: 1200px;
     margin: 0 auto;
     padding-inline: 20px;
+    padding-top: 30px;
     @include md{
+        
+        padding: 80px 0 0;
         padding-inline:0;
     }
     .small-header__section{
         display: flex;
         flex-direction: column;
-        
+        @include md{
+            padding-left: 30px;
+        }
         .sub-heading{
             padding: 10px 0;
             font-weight: bold;
